@@ -7,7 +7,5 @@ setup(
     author='Author Name',
     author_email='haqury@gmail.com',
     packages=['DearWidgetTemplate'],  # same as name
-    install_requires=['pyperclip', 'PyQt5',
-                      'SpeachToTextWidget @ git+ssh://git@github.com/haqury/SpeachToTextWidget.git@master#egg=SpeachToTextWidget'
-                      ],  # external packages as dependencies
+    install_requires=['pyperclip', 'PyQt5'],  # external packages as dependencies
 )
