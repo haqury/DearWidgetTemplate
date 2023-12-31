@@ -3,8 +3,6 @@ import SpeachToTextWidget
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel
 from win32api import GetSystemMetrics
 
-import subtitle_speach
-
 
 class Widget(QWidget):
     def __init__(self, widget_id):
