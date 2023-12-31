@@ -1,7 +1,5 @@
-import sys
 import SpeachToTextWidget
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel
-from win32api import GetSystemMetrics
 
 
 class Widget(QWidget):
@@ -42,7 +40,7 @@ class App(QWidget):
 
         speach.resize(500, 150)
         speach.show()
-        speach.move(GetSystemMetrics(0) - speach.size().width(), GetSystemMetrics(1) - 400)
+        speach.move(500, 400)
 
         # Прячем виджеты на разных экранах (можно использовать методы move для позиционирования на разных экранах)
         widget1.move(-1000, -1000)
@@ -56,12 +54,3 @@ class App(QWidget):
             widget.show()
         else:
             print(f"Виджет с ID {widget_id} не найден.")
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    main_window = App()
-
-    # Пример вызова отображения виджета по запросу
-    main_window.show_widget(1)  # Показать виджет с ID 1
-
-    sys.exit(app.exec_())
