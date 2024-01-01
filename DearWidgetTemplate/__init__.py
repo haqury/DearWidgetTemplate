@@ -25,13 +25,14 @@ class WidgetManager:
         return self.widgets.get(widget_id)
 
 class App(QWidget):
-    def __init__(self):
+    def __init__(self, state):
         super().__init__()
         self.widget_manager = WidgetManager()
 
         # Создание и добавление виджетов в менеджер
         widget1 = Widget(1)
         widget2 = Widget(2)
+        self.state = state
         self.widget_manager.add_widget(1, widget1)
         self.widget_manager.add_widget(2, widget2)
 
